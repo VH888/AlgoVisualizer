@@ -4,8 +4,8 @@ import java.util.Arrays;
  */
 public class BubbleSortStepper implements SortStepper {
     private int[] data;
-    private int  i; // pass counter (0 through n-1)
-    private int  j; // index within the current pass (0 through n-i-1)
+    private int  i; // pass counter (0 through n-1) - first for loop
+    private int  j; // index within the current pass (0 through n-i-1) - second for loop
     private boolean swapped;
     private boolean finished; // true once the array is fully sorted
     /**
@@ -52,7 +52,7 @@ public class BubbleSortStepper implements SortStepper {
         } else {
             // End of a full pass through the array
             if (!swapped) {
-                // No swaps → array is sorted
+                // No swaps array is sorted
                 finished = true;
             } else {
                 //next pass:
